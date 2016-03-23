@@ -13,7 +13,7 @@ COPY configs/samba /etc/samba/smb.conf
 RUN addgroup smbgrp
 RUN mkdir -p /samba/secured
 RUN chmod -R 0770 /samba/secured
-RUN service smbd restart 
+RUN service samba restart 
 
 #open ports
-EXPOSE 22 2222 2000 445 139
+EXPOSE 22 445 137 138 139

@@ -1,6 +1,15 @@
-[secured]
- path = /samba/secured
- valid users = @smbgrp
- guest ok = no
- writable = yes
- browsable = yes
+[global]
+workgroup = WORKGROUP
+server string = Samba Server
+log file = /var/log/samba/%m.log
+max log size = 50
+security = user
+map to guest = Bad User 
+dns proxy = no
+
+[proft]
+path = /samba/secured
+valid users = @smbgrp
+guest ok = no
+writable = yes
+browsable = yes
