@@ -12,8 +12,7 @@ RUN apt-get install -y samba samba-common python-glade2 system-config-samba
 COPY configs/samba /etc/samba/smb.cnf
 RUN addgroup smbgrp
 RUN mkdir -p /samba/secured
-RUN cd /samba
-RUN chmod -R 0770 secured/
+RUN chmod -R 0770 /samba/secured
 RUN service smbd restart 
 
 #open ports
