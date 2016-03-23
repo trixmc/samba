@@ -7,7 +7,6 @@ RUN apt-get install -y software-properties-common python-software-properties
 RUN apt-get install -y vim nano mc screen curl unzip wget
 RUN apt-get install -y samba samba-common python-glade2 system-config-samba
 
-
 #SUMBA Config
 RUN mv /etc/samba/smb.cnf /etc/samba/smb.cnf.bak
 COPY configs/samba /etc/samba/smb.cnf
