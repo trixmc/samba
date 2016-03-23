@@ -1,0 +1,6 @@
+[secured]
+ path = /samba/secured
+ valid users = @smbgrp
+ guest ok = no
+ writable = yes
+ browsable = yes
