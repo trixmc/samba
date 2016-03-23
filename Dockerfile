@@ -8,12 +8,12 @@ RUN apt-get install -y vim nano mc screen curl unzip wget
 RUN apt-get install -y samba samba-common python-glade2 system-config-samba
 
 #SUMBA Config
-#RUN mv /etc/samba/smb.cnf /etc/samba/smb.cnf.bak
-COPY configs/samba /etc/samba/smb.cnf
+RUN mv /etc/samba/smb.conf /etc/samba/smb.conf.bak
+COPY configs/samba /etc/samba/smb.conf
 RUN addgroup smbgrp
 RUN mkdir -p /samba/secured
 RUN chmod -R 0770 /samba/secured
 RUN service smbd restart 
 
 #open ports
-EXPOSE 22 2222 2000
+EXPOSE 22 2222 2000 445 139
