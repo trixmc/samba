@@ -8,7 +8,7 @@ map to guest = Bad User
 dns proxy = no
 
 [proft]
-path = /samba/secured
+path = /var/shara
 valid users = @smbgrp
 guest ok = no
 writable = yes

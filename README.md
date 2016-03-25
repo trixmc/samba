@@ -1,6 +1,6 @@
 # Create container
 ```
-docker run -it -d --name=samba -h=samba -p 445:445 -p 1001:22 cristo/samba /bin/bash
+docker run -it -d --name=samba -h=samba -p 445:445 -p 1001:22 trixmc/samba /bin/bash
 ```
 
 # SSH
@@ -13,6 +13,6 @@ password: root
 Added etcKeeper - autocommit on exit to /etc git local repository
 
 # Origin
-[Docker Hub] (https://registry.hub.docker.com/u/cristo/samba)
+[Docker Hub] (https://registry.hub.docker.com/u/trixmc/samba)
 
-[Git Hub] (https://github.com/monte-fm/samba)
+[Git Hub] (https://github.com/trixmc/samba)

@@ -1,4 +1,5 @@
 FROM      ubuntu
+MAINTAINER Olexander Vdovychenko <farmazin@gmail.com>
 MAINTAINER Olexander Kutsenko    <olexander.kutsenko@gmail.com>
 
 #install Software
@@ -10,8 +11,8 @@ RUN apt-get install -y samba samba-common python-glade2 system-config-samba
 #SUMBA Config
 COPY configs/samba /etc/samba/smb.conf
 RUN addgroup smbgrp
-RUN mkdir -p /samba/secured
-RUN chmod -R 0770 /samba/secured
+RUN mkdir -p /var/share
+RUN chmod -R 0770 /var/shara
 
 # SSH service
 RUN sudo apt-get install -y openssh-server openssh-client
