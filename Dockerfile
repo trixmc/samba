@@ -11,7 +11,7 @@ RUN apt-get install -y samba samba-common python-glade2 system-config-samba
 #SUMBA Config
 COPY configs/samba /etc/samba/smb.conf
 RUN addgroup smbgrp
-RUN mkdir -p /var/share
+RUN mkdir -p /var/shara
 RUN chmod -R 0770 /var/shara
 
 # SSH service
